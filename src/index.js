@@ -40,6 +40,7 @@ function onChange(event) {
 
   fetchCatByBreed(selectedValue)
     .then(cat => {
+      catInfoEl.classList.add('is-hidden');
       loaderEl.classList.remove('is-hidden');
       renderMarkupCatInfo(cat);
       loaderEl.classList.add('is-hidden');
